@@ -1,0 +1,24 @@
+.login {
+    margin-left: auto;
+    margin-right: auto;
+    width: 630px;
+    height: 100vh;
+    // max-width: 800px;
+    padding: 20px;
+
+    &__title {
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        font-weight: 600;
+    }
+
+    &__subTitle {
+        font-size: 15px;
+        color: rgb(53, 56, 64);
+        font-weight: normal;
+    }
+
+    &__modalWallets {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,518 @@
+.nftPage {
+    padding: 0 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    &__left {
+        margin-top: 60px;
+        width: 40%;
+    }
+
+    &__right {
+        margin-top: 60px;
+        width: 60%;
+    }
+
+    &__bottom {
+        width: 100%;
+    }
+}
+
+.nftPage .nftPage__left .description {
+    margin: 20px 20px 20px 0;
+
+    &__info__header {
+        height: 65px;
+        width: 100%;
+        cursor: pointer;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid rgb(229, 232, 235);
+    }
+
+    &__info__header {
+        .header__left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header__left span {
+            margin-left: 10px;
+        }
+    }
+
+    &__info__body {
+        padding: 30px;
+        height: 100px;
+        border-left: 1px solid rgb(229, 232, 235);
+        border-right: 1px solid rgb(229, 232, 235);
+        background-color: rgb(251, 253, 255);
+        overflow-x: auto;
+        font-weight: normal;
+        font-size: 12px;
+    }
+
+    &__properties {
+        display: flex;
+    }
+
+    &__properties .property {
+        width: 33%;
+        min-height: 65px;
+        background-color: rgba(21, 178, 229, 0.06);
+        border-radius: 6px;
+        border: 1px solid rgb(21, 178, 229);
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    &__properties .property__type,
+    &__properties .property__name {
+        font-weight: normal;
+        font-size: 12px;
+    }
+
+    &__properties .property__type {
+        color: rgb(21, 178, 229);
+    }
+
+    .panel {
+        margin-bottom: 0;
+    }
+
+    .panel__header {
+        border-bottom: 0;
+        border-radius: 0;
+    }
+
+    .panel.active {
+        .panel__header {
+            border-bottom: 1px solid rgb(229, 232, 235);
+        }
+    }
+
+    .panel__body {
+        overflow-y: auto;
+        padding: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+    }
+
+    .panel:first-child {
+        .panel__header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+
+    .panel:last-child {
+        .panel__header {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom: 1px solid rgb(229, 232, 235);
+        }
+
+        &.active .panel__header {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        &.active .panel__body {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom: 1px solid rgb(229, 232, 235);
+        }
+    }
+}
+
+.nftPage .nftPage__left .description {
+
+
+
+    &__about__creator {
+        margin-bottom: 10px;
+    }
+
+    &__about__creator span {
+        color: var(--primary);
+    }
+
+    &__about .aboutDesc {
+        font-weight: normal;
+        font-size: 12px;
+    }
+
+    &__about .aboutImage img {
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    &__details .body {
+        padding: 10px;
+    }
+
+    &__details__row {
+        display: flex;
+        justify-content: space-between;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    &__details__row a {
+        color: var(--primary);
+    }
+
+    &__details__row div {
+        font-weight: normal;
+    }
+}
+
+.nftPage .nftView {
+    display: flex;
+    justify-content: center;
+    max-width: 474px;
+    margin: 20px 20px 0 0;
+
+    &__source {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid rgb(229, 232, 235);
+        overflow: hidden;
+    }
+
+    &__source__header {
+        padding: 12px;
+        height: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__source__image {
+        position: relative;
+        width: 474px;
+        height: 474px;
+    }
+
+    &__source__image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    &__source__header svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+}
+
+.nftPage__right__info {
+    height: 100%;
+
+    &__header {
+        margin: 20px 20px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__header .subtitle {
+        color: var(--primary);
+    }
+
+    &__header .subtitle a {
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        font-weight: normal;
+        font-size: 16px;
+        height: 48px;
+        margin-bottom: 5px;
+    }
+
+    &__header .title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__owner {
+        font-weight: normal;
+    }
+
+    &__owner span {
+        color: var(--primary);
+    }
+
+    &__owner div {
+        margin: 24px 20px;
+    }
+
+}
+
+.nftPage__right__info__panelSale {
+    width: 100%;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(251, 253, 255);
+
+    .price__title {
+        font-weight: normal;
+        color: var(--grey);
+    }
+
+    .price__subTitle span {
+        font-size: 12px;
+        margin-left: 5px;
+        color: var(--grey);
+        font-weight: normal;
+    }
+
+    .price__subTitle svg {
+        margin-right: 10px;
+    }
+
+    .price__btn-group {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .price__btn-group .btn {
+        width: 49%;
+    }
+}
+
+
+.nftPage {
+    .panel {
+        margin-bottom: 20px;
+    }
+
+    tr {
+        font-weight: normal;
+    }
+
+    tr a {
+        color: var(--primary);
+        font-weight: normal;
+    }
+
+    .MuiTableBody-root tr:last-child td {
+        border-bottom: none;
+    }
+
+    .itemActivity .panel__body {
+        overflow-y: scroll;
+        max-height: 400px;
+    }
+
+    .itemActivity .rowActivity__transfer {
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+    }
+
+    .itemActivity .rowActivity__transfer svg {
+        margin-right: 5px;
+    }
+}
+
+.nftPage__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+
+    border-top: 1px solid rgb(229, 232, 235);
+    border-bottom: 1px solid rgb(229, 232, 235);
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    height: 70px;
+
+    .btn {
+        min-width: 150px;
+        margin-left: 20px;
+    }
+}
+
+.nftPage .tableBody {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.nftPage .rowOffer {
+    &:last-child .rowOffer__cell {
+        border-bottom: none;
+    }
+
+    .rowOffer__cell {
+        min-height: 100px;
+    }
+
+    .rowOffer__cell__btns {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .value {
+        display: flex;
+        align-items: center;
+    }
+
+    .value svg {
+        height: 14px;
+        width: 14px !important;
+    }
+
+
+    a {
+        color: var(--primary);
+        font-weight: normal;
+    }
+}
+
+
+.mintModal {
+    .modalView__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .modalView__body img {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .mintModal__info {
+        margin-top: 30px;
+        font-weight: normal;
+    }
+
+    .mintModal__buttons {
+        width: 100%;
+    }
+}
+
+.saleModal {
+    .saleModal__summary {
+
+        &__title {
+            font-size: 20px;
+            color: var(--grayishBlack);
+            margin-bottom: 10px;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: normal;
+            color: var(--grayishBlack);
+        }
+
+        &__item:last-child {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--grayishBlack);
+        }
+
+        .summary__item__left,
+        .summary__item__right {
+            font-weight: normal;
+        }
+
+        &__potentional {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+
+        &__potentional .potentional__left,
+        &__potentional .potentional__right {
+            font-size: 20px;
+            color: var(--grayishBlack);
+        }
+    }
+}
+
+.buyModal {
+
+    .modalView__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__body {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .buyModal__summary {
+
+        &__title {
+            font-size: 20px;
+            color: var(--grayishBlack);
+            margin-bottom: 10px;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: normal;
+            color: var(--grayishBlack);
+        }
+
+        &__item:last-child {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--grayishBlack);
+        }
+
+        .summary__item__left,
+        .summary__item__right {
+            font-weight: normal;
+        }
+
+        &__potentional {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+
+        &__potentional .potentional__left,
+        &__potentional .potentional__right {
+            font-size: 20px;
+            color: var(--grayishBlack);
+        }
+    }
+
+    img {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .buyModal__buttons {
+        width: 100%;
+    }
+}

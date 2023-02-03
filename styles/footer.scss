@@ -1,0 +1,107 @@
+.footer-main {
+    background-color: rgb(24, 104, 183);
+    margin-top: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 82.5%;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(229, 232, 235, 0.25)
+    }
+
+    &__navigation {
+        display: flex;
+        height: 525px;
+    }
+}
+
+.footer-main__contacts .contacts {
+
+    &__left,
+    &__right {
+        width: 45%;
+        padding-top: 40px;
+    }
+
+    &__right .title {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    &__right__btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__right .contact-btn {
+        cursor: pointer;
+        margin-right: 12px;
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        padding: 17px 24px;
+        background-color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+}
+
+.footer-main .navigation {
+    &__left {
+        width: 25%;
+        padding-top: 40px;
+    }
+
+    &__left svg{
+        width: 30px;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 40px;
+        padding-left: 75px;
+        width: 75%;
+    }
+
+    &__left__name {
+        font-size: 20px;
+    }
+
+    &__left__info {
+        margin-top: 5px;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    &__right__list a{
+        color: #fff;
+    }
+
+    &__right__list h3 {
+        margin-bottom: 20px;
+    }
+
+    &__right__list li {
+        margin-top: 12px;
+        font-weight: normal;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}

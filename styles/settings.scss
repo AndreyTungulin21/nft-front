@@ -1,0 +1,103 @@
+.settings {
+    width: 100%;
+    display: flex;
+    color: var(--grayishBlack);
+    padding-bottom: 20px;
+
+    &__right {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    &__right__body {
+        width: 100%;
+        margin: 28px 52px 0px;
+    }
+
+    &__right__body form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__right__body__content {
+        width: 60%;
+    }
+
+    &__right__body__imgs {
+        width: 30%;
+    }
+
+    &__right__body__imgs .profile {
+
+        img,
+        .inputContainerImage__body {
+            border-radius: 100%;
+        }
+
+    }
+
+
+    &__right__body__imgs .banner {
+
+        img,
+        .inputContainerImage__body {
+            border-radius: 10px;
+        }
+    }
+
+    &__right__body__imgs .inputContainerImage__body {
+        width: 100%;
+        height: 100%;
+        border: none;
+        height: 150px;
+        width: 150px;
+        background-color: rgb(240, 240, 240);
+    }
+
+    &__right__body__imgs .inputContainerImage__body:hover {
+        background-color: rgb(233, 232, 232);
+    }
+
+    &__right__body__imgs .inputContainerImage__body svg {
+        font-size: 30px;
+    }
+}
+
+
+.settings .settingsBar {
+    width: 340px;
+    padding: 0px 12px;
+
+    min-width: 250px;
+    height: 100%;
+    border-right: 1px solid rgb(229, 232, 235);
+
+
+    &__menu__header {
+        font-size: 14px;
+        height: 42px;
+        padding: 8px 10px;
+    }
+
+
+    &__menu__body .item {
+        border-radius: 10px;
+        display: flex;
+        width: 100%;
+        padding: 16px;
+        color: rgb(112, 122, 131);
+    }
+
+    &__menu__body .item.active {
+        background-color: rgb(243, 251, 254);
+    }
+
+    &__menu__body .item:hover {
+        color: rgb(53, 56, 64);
+    }
+
+    &__menu__body .item__icon {
+        margin-right: 16px;
+    }
+
+}

@@ -1,0 +1,60 @@
+.modalWallets {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 10px;
+    margin: 0px;
+
+
+    &__item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(229, 232, 235);
+    }
+
+
+    &__item__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item .loader {
+        height: 30px;
+    }
+
+    &__item svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    &__item button {
+        width: 100%;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item:last-child {
+        border-bottom: none;
+    }
+
+    &__item:hover {
+        transition: all 0.2s ease 0s;
+        box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+        background-color: rgb(251, 253, 255);
+    }
+
+    &__item:first-child:hover {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    &__item:last-child:hover {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    &__item__info__name {
+        margin-left: 10px;
+    }
+}

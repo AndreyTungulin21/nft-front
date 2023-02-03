@@ -1,0 +1,11 @@
+.editCollection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        width: 646px;
+        max-width: 100%;
+        padding: 24px;
+    }
+}

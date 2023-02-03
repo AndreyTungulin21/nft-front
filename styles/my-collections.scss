@@ -1,0 +1,32 @@
+.myCollections {
+    padding: 24px;
+    margin: 0 80px;
+
+    &__header {
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        margin-top: 33px;
+        margin-bottom: 16px;
+    }
+
+    span {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    &__btns {
+        display: flex;
+        margin-top: 25px;
+    }
+
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-gap: 16px;
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

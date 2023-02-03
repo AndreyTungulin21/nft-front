@@ -1,0 +1,40 @@
+image: node:14.16.1
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build and push
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - apt-get update
+            - apt-get install -y jq
+            - declare -x VERSION=$(jq -r '.version' package.json)
+            - echo $VERSION
+            - npm install
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD registry.sobix.io
+            - docker build -t "registry.sobix.io/$BITBUCKET_REPO_SLUG/dev:$VERSION" -f
+              Dockerfile.dev .
+            - git tag $VERSION
+            - git remote -v
+            - git push origin --tags
+            - docker push "registry.sobix.io/$BITBUCKET_REPO_SLUG/dev:$VERSION"
+    prod:
+      - step:
+          name: Build and push
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - apt-get update
+            - apt-get install -y jq
+            - declare -x VERSION=$(jq -r '.version' package.json)
+            - echo $VERSION
+            - npm install
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD registry.sobix.io
+            - docker build -t "registry.sobix.io/$BITBUCKET_REPO_SLUG/prod:$VERSION" -f
+              Dockerfile.prod .
+            - docker push "registry.sobix.io/$BITBUCKET_REPO_SLUG/prod:$VERSION"

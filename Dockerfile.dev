@@ -1,0 +1,10 @@
+FROM node:14-alpine
+
+COPY . .
+RUN npm install
+RUN npm run build:development
+ENV NODE_ENV=development
+ENV NODE_OPTIONS=--max-old-space-size=8096
+
+EXPOSE 3000
+CMD ["npm", "run", "start:development"]
